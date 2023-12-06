@@ -1,4 +1,6 @@
 let productsHTML = '';
+import {cart} from '../data/cart.js';
+
 
 // const products = [{
 //   image: 'images/products/athletic-cotton-socks-6-pairs.jpg',
@@ -119,7 +121,8 @@ document.querySelectorAll('.js-add-to-cart')
         carQuantity += item.quantity;
       });
 
-      document.querySelector('.js-cart-quantity')
+      document.querySelector('.js-cart-quantity').
+      innerHTML = carQuantity;
 
     });
   });
