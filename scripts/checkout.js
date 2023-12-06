@@ -113,7 +113,7 @@ document.querySelectorAll('.js-delete-link')
         `.js-cart-item-container-${productId}`
       )
 
-      container.remove()
+      container.remove();
     });
 
   });
