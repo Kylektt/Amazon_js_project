@@ -58,3 +58,17 @@ export function removeFromCart(productId){
 
   saveToStorsge()
 }
+
+export function updateDeliveryOption (productId,deliveryOptionId){
+  let matchingItem;
+
+  cart.forEach((cartItem) => {
+    if(productId === cartItem.productId){
+      matchingItem = cartItem;
+    }
+  });
+
+  matchingItem.deliveryOptionsId = deliveryOptionId;
+  // console.log('option updated');
+  saveToStorsge();
+}
